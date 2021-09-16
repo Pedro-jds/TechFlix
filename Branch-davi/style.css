@@ -4,25 +4,15 @@
   
 }
 @keyframes cor{
- 
-  50%{
-    filter: drop-shadow(0 0 16px rgb(218, 51, 129));
+  30%{
+    filter: drop-shadow(0 0 17px rgb(253, 0, 118));
   }
   50%{
-    filter: drop-shadow(0 0 16px rgb(221, 0, 29));
+    filter: drop-shadow(0 0 17px rgb(252, 11, 252));
   }
 
-  50%{
-    filter: drop-shadow(0 0 16px rgb(190, 0, 111));
-  }
-  50%{
-    filter: drop-shadow(0 0 16px rgb(0, 201, 167));
-  }
-  75%{
-    filter: drop-shadow(0 0 16px rgb(8, 4, 255));
-  }
- 100%{
-  filter: drop-shadow(0px 2px 17px rgb(255, 5, 192));
+ 70%{
+    filter: drop-shadow(0 0 17px rgb(253, 25, 177));
   }
 }
 *{
@@ -33,7 +23,7 @@
 body{
     background-image: linear-gradient(to right, rgb(28, 7, 77) ,rgb(71, 9, 87),rgb(28, 55, 114));
     width: 100%;
-    min-height:100vh;
+    min-height:100%;
 }
 .cabecalho{
     display:flex;
@@ -44,30 +34,26 @@ body{
     padding-top: 20px;
     width: 100%;
 }
-.titulo{
+h1{
   
   height: 80px;
   width: 50vh;
-  opacity: 90%;
-  filter: drop-shadow(0px 2px 17px rgb(255, 5, 192));
-  animation-name:cor;
-  animation-duration:8s;
-  animation-iteration-count: infinite;
-
-}
-/* .techflix{
+  filter: drop-shadow(0px 2px 10px rgb(255, 5, 192));
+  animation:cor 8s infinite;
   font-family:gun;
-    align-items: center;
-    text-align: start;
-    font-style: italic;
-    font-weight: bold;
-    font-size:70px;
-    margin-left: 130px;
-    color:rgb(218, 14, 190) ;
-    text-shadow:8px 0px 3px #1da5e4,0px 0px 5px #0992d1 ,0px 0px 7px #0992d1;
+  align-items: center;
+  text-align: start;
+  font-style: italic;
+  font-weight: bold;
+  font-size:70px;
+  color:rgb(218, 14, 190) ;
   -webkit-text-stroke-width:0.01em;
   -webkit-text-stroke-color: black;
-} */
+
+}
+.logo-celular{
+  display:none;
+}
 .envelope{
     display: flex;
     justify-content: space-between;
@@ -118,7 +104,7 @@ p{
     border-radius: 10px;
     
   }
-  img{
+    img{
       object-fit: cover;
       height:400px;
       width:280px;
@@ -193,15 +179,113 @@ p{
     height:1400px;
   }
   .vitrine{
-    height: 350px;
-    width: 230px;
+    height: auto;
+    width: 18%;
     overflow: hidden;
     box-shadow: 2px 2px 4px black;
     border-radius: 20px;
+    margin:40px;
   }
   .vitrine>img{
-    height: 350px;
-    width: 230px;
+    height: 100%;
+    width:100%;
     object-fit: cover;
     border-radius: 20px;
+  }
+  .audio{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and (max-width: 680px){
+  body{
+    width: 100%;
+    min-height: 100%;
+  }
+  .descricao{
+    display:none;
+  }
+  .container{
+    display:none;
+  }
+  p{
+    display:none;
+  }
+  .logo{
+    display:none;
+  }
+    .cabecalho{
+      display:flex;
+      align-items: center;
+      justify-content:center;
+      padding: 0;
+      margin: 0;
+    }
+    h1{
+      display:none;
+    }
+
+    .logo-celular{
+      display:flex;
+      border-radius: 50px;
+      box-sizing: border-box;
+      height: 90%;
+      width:25%;
+      margin-right:20px;
+    }
+    .envelope{
+      display:flex;
+      padding:0;
+      align-items:center;
+      justify-content:center;
+      margin-left:200px;
+    }
+    .filme4{
+      display:flex;
+      width:80%;
+      height:100%;
+      align-items: center;
+      justify-content:center;
+      flex-direction:column;
+      flex-wrap: nowrap;
+      box-sizing: border-box;
+      padding:0;
+      margin-left:35px;
+
+    }
+    .imagens{
+      width:250px;
+      height:100%;
+      opacity:90%
+    }
+    img{
+      width:250px;
+      height:100%;
+      object-fit: cover;
+    }
+    .vitrine{
+      width: 80%;
+      height: 100%;
+      margin:10px;
+    }
+    .vitrine>img{
+      height: 100%;
+      width:100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .bts{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+    .dots{
+      display:none;
+    }
+    .audio{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
