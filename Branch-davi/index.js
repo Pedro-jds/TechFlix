@@ -1,6 +1,6 @@
 
  function nome(){
-  let arr=["evil+dead","star+wars","minha+mãe+é+uma+peça","pokemon","vampire+hunter+D","The+outsiders"]
+  let arr=['Orphan+Black', 'Guardians+of+the+Galaxy','Doctor+Who','Cosmos:+A+Spacetime+Odyssey','Inception', 'Arrival','the+Matrix', 'The+Theory+of+Everything', 'Hidden+Figures', 'The+Imitation+Game', 'Interstellar', 'Deus+Ex-+Machina']
   for(let i=0;i<arr.length;i++){
     $.ajax({url:`https://www.omdbapi.com/?t=${arr[i]}&apikey=42cfe2b5`,success:function(filme){
       $('.imagens')[0].innerHTML+=`<div id="film3" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-title="${filme.Title}" data-plot="${filme.Plot}" ><img src="${filme.Poster}"></div>`
@@ -8,6 +8,15 @@
   }
  }
 
+ function film(){
+  let arr=['Orphan+Black', 'Guardians+of+the+Galaxy','Doctor+Who','Cosmos:+A+Spacetime+Odyssey','Inception', 'Arrival','the+Matrix', 'The+Theory+of+Everything', 'Hidden+Figures', 'The+Imitation+Game', 'Interstellar', 'Deus+Ex-+Machina']
+  for(let i=0;i<arr.length;i++){
+    $.ajax({url:`https://www.omdbapi.com/?t=${arr[i]}&apikey=42cfe2b5`,success:function(filme2){
+      $('.filme4')[0].innerHTML+=`<div class="vitrine"><img src="${filme2.Poster}" id="films" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-title="${filme2.Title}" data-plot="${filme2.Plot}"></div>`
+    }});
+  }
+ }
+ 
  setTimeout(function (){
   let slider=new Glider(document.querySelector('.imagens'), {
     slidesToShow: 1,
@@ -66,5 +75,15 @@ document.addEventListener('click', function(event){
     let descricao_filme=event.target.getAttribute('data-plot');
     document.querySelector('.modal-body').innerText = descricao_filme;
   }
+
+   else if(event.target.id=="films"){
+    let nome_filme=event.target.getAttribute('data-title');
+
+    document.querySelector('.modal-title').innerText = nome_filme;
+    let descricao_filme=event.target.getAttribute('data-plot');
+    document.querySelector('.modal-body').innerText = descricao_filme;
+  }
+  console.log(event)
 })
- nome()
+console.log($('.filme4')[0])
+ nome(), film()
