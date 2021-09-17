@@ -59,3 +59,12 @@ figcaption{
 img{
     max-height: 90%;
 }
+
+
+
+#card-img{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
