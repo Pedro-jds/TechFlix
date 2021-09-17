@@ -1,62 +1,88 @@
+@font-face {
+    font-family: 'gunmetal';
+    src: url(./fonte/gunmetl.ttf);
+}
 body {
     margin: 10px;
+
 }
 header {
     height: 100px;
     background: radial-gradient(#1210D9, #7605E0 45%, #A618D1);
+    animation: bg-tr 5s ease-in-out infinite;
+    background-size: 200% 200%;
     border: 5px groove black;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: center;    
 }
-header > h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3.5em;
-    padding: 10px 30px 10px 30px;
-    color: black;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 1.5px 1.5px 1px white;
-    border: 5px groove white;
-    background-image: url(./images/nosignal.gif);
+header > p {
+    font-family: 'gunmetal';
+    font-size: 5em;
+    margin: 0;
+    color: white;
 }
 main {
     display: flex;
     flex-wrap: wrap;
+    border: 5px solid white;
+    background-color: rgb(30, 30, 30);
 }
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
     margin: 2em;
+    color: white;
 }
-main p {
+.section1 > p, .um {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 2em 2em 4em;
+    color: white;
+
+}
+.section1 {
+    display: flex;
+    flex-direction: column;
+}
+.divi {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 section {
     border: 1px solid black;
+    /* margin: 1em; */
 }
 .section-1 {
     width: 100%;
     height: fit-content;
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#3B0270,#FF16CE, #6247F2 );
+    background-size: 300% 300%;
+    animation: bg-tr 5s ease-in-out infinite;
 }
-#luth {
-  width: 15%;
-  border-radius: 50%;
-  border: 3px outset black;
-  margin: 3px;
-}
-.div1 {
-    border: 1px solid black;
+.div1, .div2, .div3, .div4, .div5 {
+    border: 5px inset black;
     padding: 0;
-    margin: 10px;
+    margin: 1em 1em 1em 3em;
+    display: flex;
+    align-items: center;
 }
-.div1 > p {
+#davi, #gabi, #luana, #luth, #pedro {
+    height: 200px;
+    width: 200px;
+    border-radius: 300px;
+    border: 3px groove black;
     margin: 1em;
-    height: fit-content;
+}
+span {
+    border: 1px solid white;
+    margin: 1em;
+    width: fit-content;
+    padding: 0 0.5em;
 }
 .section-2 {
     width: 100%;
@@ -66,32 +92,44 @@ section {
 .section-2 > h2 {
     text-align:center;
 }
-.l1 {
-    display: flex;
-    text-align: center;
-    margin: 3em;
-}
-.l1 > p {
-    flex-grow: 1;
-}
-.l2 {
-    display: flex;
-    flex-direction: row;
-    text-align: start;
-
-    margin: 3em 2em 3em 2em;
-}
-.l2 > p {
-    flex-grow: 2;
-}
-.l3 {
-    display: flex;
-    text-align: center;
-    margin: 3em;
-}
-.l3 > p {
-    flex-grow: 1;
-}
 .section-3 {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-3 > span {
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+.section-3 > span > p {
+    text-align: center;
+    font-size: 2em;
+    margin: 0.5em;
+}
+.form-control {
+    height: 100px;
+    margin: 1em 1em 1em 1em;
+}
+.section-3 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+@keyframes bg-tr {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
