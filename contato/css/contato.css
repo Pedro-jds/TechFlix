@@ -4,23 +4,22 @@
 }
 body {
     margin: 10px;
-
 }
-header {
-    height: 100px;
-    background: radial-gradient(#1210D9, #7605E0 45%, #A618D1);
-    animation: bg-tr 5s ease-in-out infinite;
-    background-size: 200% 200%;
-    border: 5px groove black;
+/* header {
+    width: 100vw;
+} */
+.navbar-brand {
     display: flex;
-    justify-content: center;
-    align-items: center;    
+    height: 75px;
+    width: 300px;
 }
-header > p {
-    font-family: 'gunmetal';
-    font-size: 5em;
-    margin: 0;
-    color: white;
+.navbar-expand-lg .navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+}
+li > a, p {
+    font-family: 'Roboto', sans-serif;
+    /* margin: 1.2em; */
 }
 main {
     display: flex;
@@ -29,29 +28,28 @@ main {
     background-color: rgb(30, 30, 30);
 }
 h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
     margin: 2em;
     color: white;
 }
 .section1 > p, .um {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 2em 2em 4em;
     color: white;
-
 }
 .section1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .divi {
     display: flex;
     justify-content: start;
     align-items: center;
 }
-section {
-    border: 1px solid black;
-    /* margin: 1em; */
+.container .section-1 {
+    margin: 0;
+    /* padding: 0; */
 }
 .section-1 {
     width: 100%;
@@ -60,16 +58,25 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg,#3B0270,#FF16CE, #6247F2 );
-    background-size: 300% 300%;
-    animation: bg-tr 5s ease-in-out infinite;
+    margin: 0;
 }
 .div1, .div2, .div3, .div4, .div5 {
     border: 5px inset black;
     padding: 0;
-    margin: 1em 1em 1em 3em;
+    margin: 1em;
     display: flex;
     align-items: center;
+    background: linear-gradient(45deg,black, white, black );
+    background-size: 300% 300%;
+    animation: bg-tr 5s ease-in-out infinite;
+    height: 100%;
+}
+.span1 { 
+    width: 100%;
+    height: 100%;
+}
+.span1 > p {
+    margin: 1.35em;
 }
 #davi, #gabi, #luana, #luth, #pedro {
     height: 200px;
@@ -82,7 +89,8 @@ span {
     border: 1px solid white;
     margin: 1em;
     width: fit-content;
-    padding: 0 0.5em;
+    height: 50%;
+    padding: 0.5em 0.5em;
 }
 .section-2 {
     width: 100%;
@@ -94,6 +102,7 @@ span {
 }
 .section-3 {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,10 +110,11 @@ span {
 .section-3 > span {
     border: 5px solid white;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 1em;
+    color: white;
 }
 .section-3 > span > p {
     text-align: center;
@@ -122,6 +132,12 @@ span {
     align-items: center;
     margin: 1em;
 }
+.section-3 > p {
+    color: white;
+}
+footer > p {
+    text-align: center;
+}
 @keyframes bg-tr {
     0% {
         background-position: 0% 50%;
@@ -133,3 +149,13 @@ span {
         background-position: 0% 50%;
     }
 }
+@media
+
+    (max-width: 480px) { 
+        body {
+            margin: 0;
+        }
+        .div1, .div2, .div3, .ddiv4, .div5 {
+            margin: 0;
+        }
+    }
