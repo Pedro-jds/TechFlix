@@ -1,0 +1,165 @@
+
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url(NotoSansJP-Bold.otf);
+}
+
+* {box-sizing: border-box}
+
+body{
+    background-color: #0e121a;
+}
+
+#back {
+  background-color:rgba(0, 0, 0, 0.377)!important ;
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.377);
+  width: 70%;
+  border-radius: 40px;
+  margin:auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=number]  {
+  width: 60%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #9b9393;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus{
+  background-color: rgba(221, 221, 221, 0.678);
+  outline: none;
+}
+
+input:hover {
+    background-color: #837b7b ;
+    box-shadow: 2px 2px 2px 1px rebeccapurple;
+}
+
+::placeholder{
+  color: rgb(34, 29, 29);
+}
+
+
+hr {
+  border: 1px solid #0e999e8a;
+  margin-bottom: 25px;
+  width: 60%;
+}
+
+h1{
+    color: #c924a0a4;
+    font-family: "Noto";
+    font-size: 59px;
+    margin: 38px 20px 0px;
+    padding-bottom: 20px;
+}
+
+h1:hover{
+  text-shadow: rebeccapurple 1px 0 10px;
+  transition: 1s;
+}
+
+
+b{
+    color:rgba(255, 255, 255, 0.842) ;
+    text-align: start;
+    font-family: "Roboto";
+    font-weight: lighter;
+}
+
+.subtitulo {
+    color: rgba(231, 226, 226, 0.897);
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+.adress2 {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+
+.adress1 {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+
+#cidade{
+  width:32%;
+}
+
+#uf{
+width: 13%;
+}
+
+#bairro{
+  width:37%;
+}
+
+p {
+  color: rgb(224, 223, 223);
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+
+.cadastrobtn {
+  color: #aa04a2;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border-color: #aa04a273;
+  border-width:medium;
+  background-color: rgba(0, 0, 0, 0.377);
+  cursor: pointer;
+  width: 60%;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+.cadastrobtn:hover {
+  opacity:1;
+  box-shadow: 5px 3px 3px rebeccapurple;
+  transition: 1.3s
+}
+
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+   text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.377);
+  position: relative;
+  bottom: 0;
+  margin-top: 30px;
+  padding: 20px 10px;
+}
+
