@@ -5,21 +5,8 @@
 body {
     margin: 10px;
 }
-/* header {
-    width: 100vw;
-} */
-.navbar-brand {
-    display: flex;
-    height: 75px;
-    width: 300px;
-}
-.navbar-expand-lg .navbar-nav {
-    width: 100%;
-    justify-content: flex-end;
-}
 li > a, p {
     font-family: 'Roboto', sans-serif;
-    /* margin: 1.2em; */
 }
 main {
     display: flex;
@@ -31,27 +18,32 @@ h2 {
     font-size: 2em;
     margin: 2em;
     color: white;
+    background-image: linear-gradient(45deg, white, black, white);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: bg-tr 5s ease-in-out infinite;
 }
-.section1 > p, .um {
+.section-1 > p, .um {
     margin: 0 2em 2em 4em;
     color: white;
 }
-.section1 {
+.section-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.divi {
+.box-image {
     display: flex;
     justify-content: start;
     align-items: center;
 }
-.container .section-1 {
+.container .section-2 {
     margin: 0;
-    /* padding: 0; */
 }
-.section-1 {
+.section-2 {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -71,20 +63,6 @@ h2 {
     animation: bg-tr 5s ease-in-out infinite;
     height: 100%;
 }
-.span1 { 
-    width: 100%;
-    height: 100%;
-}
-.span1 > p {
-    margin: 1.35em;
-}
-#davi, #gabi, #luana, #luth, #pedro {
-    height: 200px;
-    width: 200px;
-    border-radius: 300px;
-    border: 3px groove black;
-    margin: 1em;
-}
 span {
     border: 1px solid white;
     margin: 1em;
@@ -92,13 +70,22 @@ span {
     height: 50%;
     padding: 0.5em 0.5em;
 }
-.section-2 {
+.span1 { 
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
 }
-.section-2 > h2 {
-    text-align:center;
+.span1 > p {
+    margin: 1.35em;
+}
+p > strong {
+    font-weight: bold;
+}
+#davi, #gabi, #luana, #luth, #pedro {
+    height: 170px;
+    width: 170px;
+    border-radius: 300px;
+    border: 3px groove black;
+    margin: 1em;
 }
 .section-3 {
     width: 100%;
@@ -110,7 +97,6 @@ span {
 .section-3 > span {
     border: 5px solid white;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding: 1em;
@@ -135,9 +121,16 @@ span {
 .section-3 > p {
     color: white;
 }
-footer > p {
-    text-align: center;
-}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+    padding: 20px 10px;
+  }
 @keyframes bg-tr {
     0% {
         background-position: 0% 50%;
@@ -155,7 +148,23 @@ footer > p {
         body {
             margin: 0;
         }
-        .div1, .div2, .div3, .ddiv4, .div5 {
-            margin: 0;
+        h2 {
+            text-align: center;
         }
+        .um {
+            text-align: center;
+        }
+        .div1, .div2, .div3, .div4, .div5 {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .span1 {
+            margin: 0;
+            padding: 0;
+        }
+        .section-3 > span {
+            flex-direction: column;
+        }
+
     }
