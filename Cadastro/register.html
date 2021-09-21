@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
+    <script defer src="logic.js"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="back">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="techflix.png" alt="TechFlix" width="113" height="30"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cadastre-se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ajuda</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+   <form action="action_page.php">
+    <div class="container" id="formulario">
+      <h1>Cadastro</h1>
+      <p class="subtitulo">Preencha seus dados abaixo: </p>
+      <hr>
+
+      <label for="nome"><b>Nome</b></label>
+      <input type="text" placeholder="Digite seu nome" name="nome" id="nome" required>
+  
+      <label for="email"><b>Email</b></label>
+      <input type= "email" placeholder="Digite seu e-mail" name="email" id="email" required>
+
+      <label for="rg"><b>RG</b></label>
+      <input type="text" placeholder="Digite seu RG" name="identidade" id="identidade"  title="Digite apenas números" maxlength="9" onkeypress="return onlyNumberKey(event)" required >
+  
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite sua senha" name="psw" id="psw"  pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$" Title="A senha deverá ser composta por letras e números e possuir, no mínimo, 6 caracteres" required>
+  
+      <label for="psw-repeat"><b>Confirme sua Senha</b></label>
+      <input type="password" placeholder="Confirme a senha digitada" name="psw-repeat" id="psw-repeat" required>
+
+      <label for="endereco"><b>Endereço</b></label>
+      <input type="text" placeholder="CEP" name="cep" id="cep" maxlength="9" onblur="pesquisacep(this.value)" onkeypress="return onlyNumberKey(event)" required >
+      <input type="text" placeholder="Rua, Avenida, Estrada..." name="rua" id="rua" requeired >
+      
+
+      <div class="adress2">
+        <input type="text" placeholder="Bairro" name="bairro" id="bairro" disabled>
+        <input type="text" placeholder="Cidade" name="cidade" id="cidade" disabled>
+        <input type= "text" placeholder="Estado" name="uf" id="uf" disabled >
+      </div>
+      <hr>
+
+      
+  
+      <p>Ao criar uma conta você está de acordo com os nossos <a href="#">Termos de Privacidade</a>.</p>
+      <button type="submit" class="cadastrobtn">Cadastro</button>
+
+      <div class="signin">
+        <p>Já tem uma conta?<a href="#"> Entrar</a>.</p>
+      </div>
+    </div>
+  
+  </form> 
+</body>
+<footer>
+  <small>&copy; Copyright 2021, Página desenvolvida para fins acadêmicos</small> 
+</footer>
+</html>
+
