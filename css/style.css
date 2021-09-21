@@ -1,0 +1,92 @@
+*{
+    background: #0e121a;
+    font-family: 'Roboto', sans-serif!important;
+}
+p{
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: -13px;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#carousel-item1{
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.caixa{
+    position: absolute!important;
+    z-index: +1!important;
+    justify-content: flex-start!important;
+    background: rgba(255, 255, 255, 0)!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 140px;
+}
+#carouselExampleFade{
+    position: relative!important;
+    z-index: -1!important;
+}
+.carousel-inner{
+    z-index:-1 !important;
+    position: absolute!important;
+    right: 0!important;
+    top: 0!important;
+    width: 80%!important; 
+    z-index: -1!important;
+}
+.logo{
+    background-color: rgba(255, 255, 255, 0)!important;
+    margin-bottom: -70px;
+}
+.bio{
+    background-color: rgba(255, 255, 255, 0)!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.botao{
+    background-color:rgba(255, 255, 255, 0)!important;
+}
+.logo-grande{
+    background-color:rgba(255, 255, 255, 0)!important;
+}
+.bio2{
+    background-color: rgba(255, 255, 255, 0)!important;
+}
+.bio2-frase{
+    font-weight: medium!important;
+    font-size: 30px;
+}
+#btn1{
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+}
+#btn2{
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+    padding: 20px 10px;
+}
