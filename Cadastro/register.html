@@ -41,41 +41,40 @@
 
    <form action="action_page.php">
     <div class="container" id="formulario">
-      <h1>Cadastro</h1>
-      <p class="subtitulo">Preencha seus dados abaixo: </p>
+      <h1>CADASTRO</h1>
       <hr>
-
-      <label for="nome"><b>Nome</b></label>
+  
+      <p class="subtitulo">Preencha seus dados abaixo: </p>
       <input type="text" placeholder="Digite seu nome" name="nome" id="nome" required>
   
-      <label for="email"><b>Email</b></label>
+      
       <input type= "email" placeholder="Digite seu e-mail" name="email" id="email" required>
 
-      <label for="rg"><b>RG</b></label>
+     
       <input type="text" placeholder="Digite seu RG" name="identidade" id="identidade"  title="Digite apenas números" maxlength="9" onkeypress="return onlyNumberKey(event)" required >
   
-      <label for="psw"><b>Senha</b></label>
+      
       <input type="password" placeholder="Digite sua senha" name="psw" id="psw"  pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$" Title="A senha deverá ser composta por letras e números e possuir, no mínimo, 6 caracteres" required>
   
-      <label for="psw-repeat"><b>Confirme sua Senha</b></label>
+      
       <input type="password" placeholder="Confirme a senha digitada" name="psw-repeat" id="psw-repeat" required>
 
-      <label for="endereco"><b>Endereço</b></label>
+    
       <input type="text" placeholder="CEP" name="cep" id="cep" maxlength="9" onblur="pesquisacep(this.value)" onkeypress="return onlyNumberKey(event)" required >
-      <input type="text" placeholder="Rua, Avenida, Estrada..." name="rua" id="rua" requeired >
+      <input type="text" placeholder="Rua, Avenida, Estrada..." name="rua" id="rua" requeired > 
       
 
       <div class="adress2">
         <input type="text" placeholder="Bairro" name="bairro" id="bairro" disabled>
         <input type="text" placeholder="Cidade" name="cidade" id="cidade" disabled>
-        <input type= "text" placeholder="Estado" name="uf" id="uf" disabled >
+        <input type= "text" placeholder="UF" name="uf" id="uf" disabled >
       </div>
       <hr>
 
       
   
       <p>Ao criar uma conta você está de acordo com os nossos <a href="#">Termos de Privacidade</a>.</p>
-      <button type="submit" class="cadastrobtn">Cadastro</button>
+      <button type="submit" class="cadastrobtn">Cadastre-se</button>
 
       <div class="signin">
         <p>Já tem uma conta?<a href="#"> Entrar</a>.</p>
