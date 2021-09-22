@@ -6,11 +6,12 @@
 
 body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color:  black;
     opacity: 0.9;
     font-family: 'Roboto', sans-serif;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -102,9 +103,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.377);
-    position: relative;
+    /* background-color: rgba(0, 0, 0, 0.377); */
+    background-color: aquamarine;
+    align-self: baseline;
+    width: 100%;
     bottom: 0;
-    margin-top: 30px;
+    margin-top: auto;
     padding: 20px 10px;
   }
