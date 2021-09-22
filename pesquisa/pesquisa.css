@@ -38,7 +38,9 @@ body{
     justify-content: flex-start;
 }
 
-
+figure>figcaption{
+    background-color:blueviolet;
+}
 
 
 button{
@@ -75,6 +77,11 @@ img{
     float: none;
 }
 
+#verMais{
+    max-width: 200px;
+}
+
+
 .overlay{
     display: none;
     position: fixed;
@@ -104,7 +111,8 @@ footer {
     flex-direction: row;
     justify-content: center;
     /* background-color: rgba(0, 0, 0, 0.377); */
-    background-color: aquamarine;
+    background-color: #212529;
+    color: aliceblue;
     align-self: baseline;
     width: 100%;
     bottom: 0;

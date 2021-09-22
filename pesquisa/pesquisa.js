@@ -13,6 +13,7 @@ $('#pesquisa').keyup(function () {
       if (filmesInfo.Response == "False") {
         exibirFilme += `<h2 class="col-md-auto">FIlme não encontrado!</h2>`
         $('.img-container').html(exibirFilme)
+        $( "#verMais" ).hide();
       }
       //compara se o valor devolvido não é undefined antes de executar o proximo passo
       else if (xhr.status === 200 && filmesInfo.Search !== undefined) {
@@ -20,10 +21,11 @@ $('#pesquisa').keyup(function () {
         $.each(filmesInfo.Search, function (index, movie) {
           if (movie.Poster !== "N/A" && index < 10) {
             exibirFilme += `<figure class="col-sm-6 col-md-4 col-lg-3" onclick="retorna(id)" id="${movie.imdbID}"data-bs-toggle="modal" data-bs-target="#exampleModal">`
-            exibirFilme += `<img src="${movie.Poster}" class="col-12 movies" value="${movie.imdbID}" alt="">`
+            exibirFilme += `<img src="${movie.Poster}" class="col-12 movies" value="${movie.imdbID}" style="max-height: 380px;" alt="">`
             exibirFilme += `<figcaption>${movie.Title}<br>Ano: ${movie.Year}</figcaption>`
             exibirFilme += `</figure>`
             $('.img-container').html(exibirFilme)
+            $( "#verMais" ).show();
           }
         }
         )
@@ -38,6 +40,9 @@ $('#verMais').click(function () {
   const filmesPesquisado = document.getElementById('pesquisa').value
   let exibirFilm = ''
   $.getJSON(`http://www.omdbapi.com/?`, { s: filmesPesquisado, apikey: 'eef5e1d2', type: 'movie', page: `${page}` }, function (filmesInf, statusText, xhr) {
+    if(filmesInf.Response==="False"){
+      alert('Todos Filmes já foram mostrados!')
+    }
     //verifica e o status da requisição é 200(ok)
     console.log(filmesInf)
     //compara se o valor devolvido não é undefined antes de executar o proximo passo
@@ -45,7 +50,13 @@ $('#verMais').click(function () {
       //percorre o array de objetos devolvidos pela requisição filmes info
       $.each(filmesInf.Search, function (index, movi) {
         exibirFilm += `<figure class="col-sm-6 col-md-4 col-lg-3" onclick="retorna(id)" id="${movi.imdbID}"data-bs-toggle="modal" data-bs-target="#exampleModal">`
-        exibirFilm += `<img src="${movi.Poster}" class="col-12 movies" value="${movi.imdbID}" alt="">`
+        if(movi.Poster==="N/A"){
+          exibirFilm += `<img src="imagens-pesquisa/filmes_10164_zz.jpg" class="col-12 movies" value="${movi.imdbID}"  style="max-height: 380px;"alt="">`
+        }
+        else{
+        exibirFilm += `<img src="${movi.Poster}" class="col-12 movies" value="${movi.imdbID}"  style="max-height: 380px;" alt="">`
+        }
+        //exibirFilm += `<img src="${movi.Poster}" class="col-12 movies" value="${movi.imdbID}" style="max-height: 380px;" alt="">`
         exibirFilm += `<figcaption>${movi.Title}<br>Ano: ${movi.Year}</figcaption>`
         exibirFilm += `</figure>`
       })
@@ -69,7 +80,7 @@ $('#btn-search').click(function () {
     exibirFilme += `<figcaption>${filmeInfo.Title}<br>Ano: ${filmeInfo.Year}</figcaption>`
     exibirFilme += `</figure>`
     $('.img-container').html(exibirFilme)
-
+    $( "#verMais" ).hide();
   })
 })
 
