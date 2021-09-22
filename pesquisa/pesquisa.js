@@ -51,7 +51,7 @@ $('#verMais').click(function () {
       $.each(filmesInf.Search, function (index, movi) {
         exibirFilm += `<figure class="col-sm-6 col-md-4 col-lg-3" onclick="retorna(id)" id="${movi.imdbID}"data-bs-toggle="modal" data-bs-target="#exampleModal">`
         if(movi.Poster==="N/A"){
-          exibirFilm += `<img src="imagens-pesquisa/filmes_10164_zz.jpg" class="col-12 movies" value="${movi.imdbID}"  style="max-height: 380px;"alt="">`
+          exibirFilm += `<img src="imagens-pesquisa/posterNA.jpg" class="col-12 movies" value="${movi.imdbID}"  style="max-height: 380px;"alt="">`
         }
         else{
         exibirFilm += `<img src="${movi.Poster}" class="col-12 movies" value="${movi.imdbID}"  style="max-height: 380px;" alt="">`
