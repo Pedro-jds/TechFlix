@@ -1,12 +1,17 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url(Roboto-Medium.ttf);
+  src: url(Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: "Noto";
   src: url(NotoSansJP-Bold.otf);
+}
+
+@font-face {
+  font-family: "Bison";
+  src: url(Bison-Bold\(PersonalUse\).ttf);
 }
 
 * {box-sizing: border-box}
@@ -21,17 +26,21 @@ body{
 
 .container {
   padding: 16px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.377);
-  width: 70%;
+  width: 60%;
   border-radius: 40px;
   margin:auto;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
+.subtitulo{
+  padding-bottom:20px;
+}
 
 input[type=text], input[type=password], input[type=email], input[type=number]  {
   width: 60%;
@@ -40,6 +49,7 @@ input[type=text], input[type=password], input[type=email], input[type=number]  {
   display: inline-block;
   border: none;
   background: #9b9393;
+  transition:1.5s;
 }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus{
@@ -49,7 +59,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
 
 input:hover {
     background-color: #837b7b ;
-    box-shadow: 2px 2px 2px 1px rebeccapurple;
+    box-shadow: 2px 2px 2px 1px #ce19c5d8;
 }
 
 ::placeholder{
@@ -63,12 +73,21 @@ hr {
   width: 60%;
 }
 
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin:auto
+
+}
+
 h1{
-    color: #c924a0a4;
-    font-family: "Noto";
-    font-size: 59px;
-    margin: 38px 20px 0px;
+    color: rgb(211, 200, 185);
+    font-family: "Bison";
+    font-size: 65px;
+    margin: 38px 0px 0px;
     padding-bottom: 20px;
+    text-shadow: 2px 2px purple;
 }
 
 h1:hover{
@@ -78,68 +97,71 @@ h1:hover{
 
 
 b{
-    color:rgba(255, 255, 255, 0.842) ;
-    text-align: start;
+    color:rgb(211, 200, 185) ;
     font-family: "Roboto";
     font-weight: lighter;
 }
 
+
 .subtitulo {
-    color: rgba(231, 226, 226, 0.897);
+    color: rgb(211, 200, 185);
     font-family: "Roboto";
     font-size: 20px;
 }
 
 .adress2 {
-  display:flex;
-  flex-direction: row;
-  justify-content:space-evenly;
+  display:inline-flex;
+  justify-content: center;
+  gap: 15px
+
 }
 
 .adress1 {
   display:flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  gap: 20px;
+  justify-content: center;
+  gap: 5px;
 }
 
 
 #cidade{
-  width:32%;
+  width:28%;
 }
 
 #uf{
-width: 13%;
+width: 10%;
 }
 
 #bairro{
-  width:37%;
+  width:30%;
 }
 
 p {
-  color: rgb(224, 223, 223);
+  color: rgb(211, 200, 185);
     font-family: "Roboto";
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
 .cadastrobtn {
-  color: #aa04a2;
+  color: rgba(211, 200, 185, 0.753);
   padding: 16px 20px;
   margin: 8px 0;
-  border-color: #aa04a273;
-  border-width:medium;
-  background-color: rgba(0, 0, 0, 0.377);
+  /*border-color: #aa04a273;
+  border-width:medium;*/
+  border:none;
+  box-shadow: 2px 1px 1px rgba(211, 200, 185, 0.507);
+  background-color: rgba(0, 0, 0, 0.603);
   cursor: pointer;
-  width: 60%;
+  width: 40%;
   opacity: 0.9;
   font-size: 20px;
-  font-family: "Roboto";
+  font-family: "Bison";
 }
 
 .cadastrobtn:hover {
   opacity:1;
-  box-shadow: 5px 3px 3px rebeccapurple;
+  box-shadow: 5px 3px 3px  #ce19c5d8;
   transition: 1.3s
 }
 
@@ -150,6 +172,7 @@ a {
 
 .signin {
    text-align: center;
+   padding-top: 5px;
 }
 
 footer {
@@ -163,3 +186,10 @@ footer {
   padding: 20px 10px;
 }
 
+@media (max-width: 700px) {
+.adress2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
