@@ -4,6 +4,13 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   wrap: true
 })
 
-$('#myModal').on(hide.bs.modal , function(){
-  // quando o modal for fechado 
-});
+// $('#myModal').on(hide.bs.modal , function(){
+//   // quando o modal for fechado 
+// });
+
+
+const  mudarSenha = document.getElementById('trocarSenha')
+
+mudarSenha.addEventListener('click',function(){
+  alert('Email enviado com sucesso, verifique seu email para alterar senha')
+})
