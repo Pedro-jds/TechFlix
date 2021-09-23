@@ -7,7 +7,7 @@ $('#pesquisa').keyup(function () {
   //verifica se o texto digitado no campo pesquisa tem pelo menos 3 caracteres antes de realizar uma requisição para a api
   if (filmesPesquisados.length > 2) {
     //faz uma requisição para api omdb no modo busca que devolve uma array de 10 objetos de filmes
-    $.getJSON(`http://www.omdbapi.com/?`, { s: filmesPesquisados, apikey: 'eef5e1d2', type: 'movie' }, function (filmesInfo, statusText, xhr) {
+    $.getJSON(`https://www.omdbapi.com/?`, { s: filmesPesquisados, apikey: 'eef5e1d2', type: 'movie' }, function (filmesInfo, statusText, xhr) {
       //verifica e o status da requisição é 200(ok)
       console.log(filmesInfo.Response)
       if (filmesInfo.Response == "False") {
@@ -39,7 +39,7 @@ $('#verMais').click(function () {
   let page = document.getElementById('verMais').value
   const filmesPesquisado = document.getElementById('pesquisa').value
   let exibirFilm = ''
-  $.getJSON(`http://www.omdbapi.com/?`, { s: filmesPesquisado, apikey: 'eef5e1d2', type: 'movie', page: `${page}` }, function (filmesInf, statusText, xhr) {
+  $.getJSON(`https://www.omdbapi.com/?`, { s: filmesPesquisado, apikey: 'eef5e1d2', type: 'movie', page: `${page}` }, function (filmesInf, statusText, xhr) {
     if(filmesInf.Response==="False"){
       alert('Todos Filmes já foram mostrados!')
     }
@@ -74,7 +74,7 @@ $('#btn-search').click(function () {
   let exibirFilme = ''
   const filmesPesquisados = document.getElementById('pesquisa').value
   console.log(filmesPesquisados)
-  $.getJSON(`http://www.omdbapi.com/?`, { t: filmesPesquisados, apikey: 'eef5e1d2', type: 'movie' }, function (filmeInfo) {
+  $.getJSON(`https://www.omdbapi.com/?`, { t: filmesPesquisados, apikey: 'eef5e1d2', type: 'movie' }, function (filmeInfo) {
     exibirFilme += `<figure class="col-md-auto" onclick="retorna(id)" id="${filmeInfo.imdbID}"data-bs-toggle="modal" data-bs-target="#exampleModal">`
     exibirFilme += `<img src="${filmeInfo.Poster}" class="col-12 movies" value="${filmeInfo.imdbID}"  " alt="">`
     exibirFilme += `<figcaption>${filmeInfo.Title}<br>Ano: ${filmeInfo.Year}</figcaption>`
