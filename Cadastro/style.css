@@ -20,10 +20,6 @@ body{
     background-color: #0e121a;
 }
 
-#back {
-  background-color:rgba(0, 0, 0, 0.377)!important ;
-}
-
 .container {
   padding: 16px;
   padding-top: 30px;
