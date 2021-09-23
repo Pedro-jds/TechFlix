@@ -1,10 +1,5 @@
 
 @font-face {
-  font-family: "Roboto";
-  src: url(Roboto-Light.ttf);
-}
-
-@font-face {
   font-family: "Noto";
   src: url(NotoSansJP-Bold.otf);
 }
@@ -134,8 +129,8 @@ width: 10%;
 
 p {
   color: rgb(211, 200, 185);
-    font-family: "Roboto";
-    font-size: 13px;
+  font-family: "Roboto";
+  font-size: 13px;
 }
 
 
@@ -175,7 +170,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.377);
+  background-color: #212529;
+  color: aliceblue;
   position: relative;
   bottom: 0;
   margin-top: 30px;
@@ -189,3 +185,11 @@ footer {
   align-items: center;
 }
 }
+
+.bg-dark{
+  background-color: rgb(33, 37, 41,1)!important ;
+  }
+
+  li > a {
+    font-family: 'Roboto', sans-serif !important;
+  }

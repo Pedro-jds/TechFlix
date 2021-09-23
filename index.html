@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -28,19 +24,10 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="Cadastro/register.html">Cadastre-se</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cadastre-se</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ajuda</a>
+                <a class="nav-link" href="contato/contato.html">Contato</a>
               </li>
             </ul>
           </div>
@@ -58,57 +45,16 @@
             <section class="bio2">
               <p class="bio2-frase">Assista quando quiser, onde estiver.</p>
             </section>
-            <p>Descrição do serviço Descrição do serviço Descrição do serviço </p>
-            <p>Descrição do serviço Descrição do serviço Descrição do serviço</p>
+            <p>A TechFlix é uma plataforma totalmente voltada para a ciência <br>
+              e a tecnologia! Aqui apresentamos os melhores documentários e Sci-Fi,<br> 
+              que permite explorar a nossa realidade e imaginar muitas possibilidades <br>
+              pro que está por vir!</p>
           </section>
           <section class="botao">
             <!-- Botão de login modal -->
             <button type="button" id="btn1" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#myModal">LOGIN</button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal">
-              <div class="modal-dialog">
-
-                <!-- Conteúdo do modal-->
-                <div class="modal-content">
-
-                  <!-- Cabeçalho do modal -->
-                  <div class="modal-header">
-                    <button type="button" class="close" data-bs-dismiss="modal"><span aria hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Login</h4>
-                  </div>
-
-                  <!-- Corpo do modal -->
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Endereço de email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                      </div>
-                      <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Lembrar dados de login</label>
-                      </div>
-                    </form>
-                  </div>
-
-                  <!-- Rodapé do modal-->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Entrar</button>
-                    <button type="button" class="btn btn-light">Esqueci minha senha</button>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
             <!-- Botão de cadastro linkado para a página -->
-            <button type="button" id="btn2" class="btn btn-outline-secondary">CADASTRE-SE</button>
+            <a href="Cadastro/register.html"><button type="button" id="btn2" class="btn btn-outline-secondary">CADASTRE-SE</button></a>
           </section>
         </div>
 
@@ -155,8 +101,51 @@
         </div>
       </div>
     </main>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
 
+        <!-- Conteúdo do modal-->
+        <div class="modal-content">
 
+          <!-- Cabeçalho do modal -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-bs-dismiss="modal"aria hidden="true"></button>
+          </div>
+
+          <!-- Corpo do modal -->
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Endereço de email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Lembrar dados de login</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Rodapé do modal-->
+          <div class="modal-footer">
+            <a href="Branch-davi/html.JS.CSS/index.html"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Entrar</button></a>
+            <a href=""><button type="button" class="btn btn-light">Esqueci minha senha</button></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <small>&copy; Copyright 2021, Página desenvolvida para fins acadêmicos</small>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 

@@ -78,7 +78,7 @@ body{
     height:100%;
     margin-top: -40px;
     filter: drop-shadow(6px -8px 16px rgb(255, 0, 149));
-  animation:cor 8s infinite;
+    animation:cor 8s infinite;
 }
 p{
     padding:0 20%;
@@ -108,7 +108,7 @@ p{
     border-radius: 10px;
     
   }
-    img{
+.logo{
       object-fit: cover;
       height:400px;
       width:280px;
@@ -243,8 +243,8 @@ p{
       box-sizing: border-box;
       width:50%;
       height:100%;
-  animation:cor_3 8s infinite;
-  filter: drop-shadow(8px -6px 16px rgb(209, 1, 228));
+      animation:cor_3 8s infinite;
+      filter: drop-shadow(8px -6px 16px rgb(209, 1, 228));
     }
     .envelope{
       display:flex;
@@ -307,4 +307,17 @@ p{
       align-items: center;
       justify-content: center;
     }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #212529;
+    color: aliceblue;
+    align-self: baseline;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+    padding: 20px 10px;
   }
