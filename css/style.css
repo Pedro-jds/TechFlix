@@ -58,6 +58,7 @@ p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 .botao{
     background-color:rgba(255, 255, 255, 0)!important;
@@ -67,10 +68,12 @@ p{
 }
 .bio2{
     background-color: rgba(255, 255, 255, 0)!important;
+    text-align: center;
 }
 .bio2-frase{
     font-weight: medium!important;
     font-size: 30px;
+    text-align: center;
 }
 #btn1{
     margin-left: 5px!important;
@@ -80,13 +83,16 @@ p{
     margin-left: 5px!important;
     margin-right: 5px!important;
 }
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.377);
-    position: relative;
-    bottom: 0;
-    margin-top: 30px;
-    padding: 20px 10px;
+@media (max-width: 900px){
+    #carouselExampleFade{
+        display: none;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .caixa{
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+    }
 }
