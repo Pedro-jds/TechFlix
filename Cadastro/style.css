@@ -23,7 +23,6 @@ body{
   align-items: center;
   background-color: rgba(0, 0, 0, 0.377);
   width: 60%;
-  border-radius: 40px;
   margin:auto;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -72,32 +71,17 @@ hr {
 
 }
 
-h1{
-    color: rgb(211, 200, 185);
-    font-family: "Bison";
-    font-size: 65px;
-    margin: 38px 0px 0px;
-    padding-bottom: 20px;
-    text-shadow: 2px 2px purple;
-}
-
-h1:hover{
-  text-shadow: rebeccapurple 1px 0 10px;
-  transition: 1s;
-}
-
-
-b{
-    color:rgb(211, 200, 185) ;
-    font-family: "Roboto";
-    font-weight: lighter;
-}
+#titulo {
+   width: 30%;
+   padding: 20px 0 18px 0;
+}   
 
 
 .subtitulo {
-    color: rgb(211, 200, 185);
+    color: white;
     font-family: "Roboto";
     font-size: 20px;
+    font-weight: 550;
 }
 
 .adress2 {
@@ -128,20 +112,18 @@ width: 10%;
 }
 
 p {
-  color: rgb(211, 200, 185);
-  font-family: "Roboto";
-  font-size: 13px;
+  color: rgb(233, 230, 225);
+    font-family: "Roboto";
+    font-size: 13px;
 }
 
 
 .cadastrobtn {
-  color: rgba(211, 200, 185, 0.753);
+  color: rgba(231, 227, 221, 0.753);
   padding: 16px 20px;
   margin: 8px 0;
-  /*border-color: #aa04a273;
-  border-width:medium;*/
   border:none;
-  box-shadow: 2px 1px 1px rgba(211, 200, 185, 0.507);
+  box-shadow: 2px 1px 1px rgba(78, 77, 75, 0.507);
   background-color: rgba(0, 0, 0, 0.603);
   cursor: pointer;
   width: 40%;
@@ -152,7 +134,7 @@ p {
 
 .cadastrobtn:hover {
   opacity:1;
-  box-shadow: 5px 3px 3px  #ce19c5d8;
+  box-shadow: 5px 3px 3px #ce19c5d8;
   transition: 1.3s
 }
 

@@ -30,7 +30,7 @@
 
    <form action="action_page.php">
     <div class="container" id="formulario">
-      <h1>CADASTRO</h1>
+      <img src="cadastro.png" alt="titulo" id="titulo">
       <hr>
   
       <p class="subtitulo">Preencha seus dados abaixo: </p>
@@ -46,7 +46,7 @@
       <input type="password" placeholder="Digite sua senha" name="psw" id="psw"  pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$" Title="A senha deverá ser composta por letras e números e possuir, no mínimo, 6 caracteres" required>
   
       
-      <input type="password" placeholder="Confirme a senha digitada" name="psw-repeat" id="psw-repeat" required>
+      <input type="password" placeholder="Confirme sua senha" name="psw-repeat" id="psw-repeat" required>
 
     
       <input type="text" placeholder="CEP" name="cep" id="cep" maxlength="9" onblur="pesquisacep(this.value)" onkeypress="return onlyNumberKey(event)" required >
